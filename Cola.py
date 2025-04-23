@@ -29,4 +29,10 @@ class Cola:
             self.final = None
         return dato
     
+    # Operación 3: Ver el frente (peek)
+    def peek(self):
+        if self.frente is None:
+            return None  # Cola vacía
+        return self.frente.dato
+    
     

@@ -33,16 +33,45 @@ class Cola:
     # Operación 3: Ver el frente (peek)
     def peek(self):
         if self.frente is None:
-            print("La cola está vacía.")
+           
             return None  # Cola vacía
         return self.frente.dato
     # operacion 4: IsEmpty
     def is_empty(self):
         return self.frente is None  # Retorna True si la cola está vacía, False en caso contrario
-    print("Cola vacia")
-    
 
     
+
+    # Operación 5: Tamaño (size)
+    def size(self):
+        return self.contador  # Retorna el tamaño de la cola
+    #mostrar la cola
+    def mostrar(self):
+        if self.frente is None:
+          
+            return
+        actual = self.frente
+        while actual:
+            print(actual.dato, end=" -> ")
+            actual = actual.siguiente
+        print("None")  # Indica el final de la cola
+
+
+ # Mostrar la cola 
+    def mostrar(self):
+        actual = self.frente
+        elementos = []
+        while actual is not None:
+            elementos.append(str(actual.dato))
+            actual = actual.siguiente
+        print("Cola:", " -> ".join(elementos) if elementos else "vacía")
+# Ejemplo de uso
+# ----------------------
+cola = Cola()
+cola.enqueue(100)
+cola.enqueue(200)
+cola.enqueue(300)
+cola.mostrar()               # Cola: 100 -> 200 -> 300 
     
     
     

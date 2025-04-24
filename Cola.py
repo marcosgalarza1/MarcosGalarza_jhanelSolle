@@ -34,5 +34,9 @@ class Cola:
         if self.frente is None:
             return None  # Cola vacía
         return self.frente.dato
+    # operacion 4: IsEmpty
+    def is_empty(self):
+        return self.frente is None  # Retorna True si la cola está vacía, False en caso contrario
+    print("Cola vacia")
     
     

@@ -18,5 +18,15 @@ class Cola:
         else:
             self.final.siguiente = nuevo_nodo
             self.final = nuevo_nodo
-
-  
+            
+    # Operación 2: Desencolar (dequeue)
+    def dequeue(self):
+        if self.frente is None:
+            return None  # Cola vacía
+        dato = self.frente.dato
+        self.frente = self.frente.siguiente
+        if self.frente is None:  # Si la cola queda vacía
+            self.final = None
+        return dato
+    
+    
